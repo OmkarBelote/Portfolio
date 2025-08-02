@@ -92,20 +92,35 @@ function sendMessage() {
     botMessage.classList.add("bot-message");
 
     // Simple Response System
-    if (messageText.toLowerCase().includes("hello")) {
-        botMessage.textContent = "Bot: Hi there! How can I help you?";}
-    else if (messageText.toLowerCase().includes("hi")) {
-            botMessage.textContent = "Bot: Hi there! How can I help you?";}  
+    if (messageText.toLowerCase().includes("hello") || messageText.toLowerCase().includes("hi")) {
+        botMessage.textContent = "Hi there! How can I help you?";}
+    else if (messageText.toLowerCase().includes("bye") || messageText.toLowerCase().includes("goodbye")) {
+        botMessage.textContent = "Goodbye! Have a nice day👋";}   
     else if (messageText.toLowerCase().includes("contact")) {
-        botMessage.textContent = "Bot: You can email me at omkarbelote@email.com.";} 
+        botMessage.textContent = "📩: omkarbelote@email.com, 📞: 9653646185";}
+    else if (messageText.toLowerCase().includes("how are you")) {
+        botMessage.textContent = "I'm just a bot, but I'm functioning perfectly! How about you?";}      
+    else if (messageText.toLowerCase().includes("thank")) {
+        botMessage.textContent = "You're welcome!😀 Is there anything else I can help with?";}
+    else if (messageText.toLowerCase().includes("ok")) {
+        botMessage.textContent = "Yes👍. Anything else?";}
+    else if (messageText.toLowerCase().includes("fuck") || messageText.toLowerCase().includes("madarchod")|| messageText.toLowerCase().includes("behenchod")
+    || messageText.toLowerCase().includes("bkl")|| messageText.toLowerCase().includes("mad")) {
+        botMessage.textContent = "Be in your limits kiddo...Omkar knows better bad words than you.";}
     else if (messageText.toLowerCase().includes("certificate")) {
         botMessage.innerHTML = `
-            <strong>Here are my certificates:</strong> <br>
-            <a href="TCS data visualization.png" target="_blank">📜 Certificate 1</a><br>
-            <a href="certificate2.png" target="_blank">📜 Certificate 2</a><br>
-            <a href="certificate3.png" target="_blank">📜 Certificate 3</a><br>`;} 
+            <strong>My certificates:</strong><br>
+            <a href="certificates/Python%20(SWAYAM).png" target="_blank">📜 Python Programming</a><br>
+            <a href="certificates/Data analysis (Microsoft + Linkedin).png" target="_blank">📜 Data Analysis</a><br>
+            <a href="certificates/Data Science.png" target="_blank">📜 Data Science</a><br>
+            <a href="certificates/PowerBi (EDX).png" target="_blank">📜 Power BI</a><br>
+            <a href="certificates/Data analytics and Databases on AWS (EDX).png" target="_blank">📜 Databases (AWS)</a><br>
+            <a href="certificates/TCS data visualization.png" target="_blank">📜 TCS Forage</a><br>
+            <a href="certificates/Git and Github.png" target="_blank">📜 Git & Github</a><br>
+            <a href="certificates/NullClass-PowerBi-Training-Certificate.png" target="_blank">📜 Data Analyst Training</a><br>
+            `;} 
     else {
-        botMessage.textContent = "Bot: Sorry, I don't understand that.";
+        botMessage.textContent = "Sorry, I don't understand that.";
     }
 
     messagesContainer.appendChild(botMessage);
